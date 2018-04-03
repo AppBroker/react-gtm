@@ -45,7 +45,9 @@ var TagManager = {
         _ref$auth = _ref.auth,
         auth = _ref$auth === undefined ? '' : _ref$auth,
         _ref$preview = _ref.preview,
-        preview = _ref$preview === undefined ? '' : _ref$preview;
+        preview = _ref$preview === undefined ? '' : _ref$preview,
+        _ref$gTagOverride = _ref.gTagOverride,
+        gTagOverride = _ref$gTagOverride === undefined ? '' : _ref$gTagOverride;
 
     var gtm = this.gtm({
       id: gtmId,
@@ -53,7 +55,8 @@ var TagManager = {
       dataLayer: dataLayer || undefined,
       dataLayerName: dataLayerName,
       auth: auth,
-      preview: preview
+      preview: preview,
+      gTagOverride: gTagOverride
     });
     if (dataLayer) document.head.appendChild(gtm.dataScript);
     document.head.appendChild(gtm.script());
